@@ -32,6 +32,29 @@ This AWS Architecture is a fully modular, production-grade 3-tier infrastructure
 
 ---
 
+## Deployment Verification
+
+**Infrastructure Status**: Deployed and operational in us-east-1
+
+**Validated Components**:
+- Auto Scaling Group maintaining 1-3 instances based on CPU metrics
+- Application Load Balancer distributing traffic with passing health checks
+- RDS MySQL database accessible from application tier
+- CloudWatch alarms configured and tested (CPU, unhealthy targets)
+- Secrets Manager storing database credentials securely
+- Terraform state management with S3 backend and DynamoDB locking
+
+**Testing Performed**:
+- Load tested ALB with Apache Bench (1000 requests, 10 concurrent)
+- Triggered auto-scaling by inducing CPU load with stress tool
+- Verified RDS connection from EC2 instances using mysql client
+- Simulated instance failure and confirmed ASG auto-recovery
+- Validated CloudWatch alarms by crossing configured thresholds
+
+**For common issues and resolutions, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md)**
+
+---
+
 ## Monthly Cost Estimate (Dev Setup)
 
 | Service                   | Est. Monthly Cost |
