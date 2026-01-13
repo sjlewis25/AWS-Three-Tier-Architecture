@@ -11,7 +11,7 @@ availability_zones    = ["us-east-1a", "us-east-1b"]
 ami_id        = "ami-0c02fb55956c7d316"
 instance_type = "t2.micro"
 
-my_ip = "0.0.0.0/0"
+my_ip = "97.97.238.72/32"
 
 db_name     = "mydb"
 db_username = "admin"

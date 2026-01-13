@@ -5,7 +5,7 @@ resource "aws_launch_template" "app" {
 
   # IAM instance profile for Secrets Manager access
   iam_instance_profile {
-    name = "ec2-secrets-instance-profile"  
+    name = "ec2_profile"  
   }
 
   # Pass the correct variables to user_data
@@ -14,9 +14,6 @@ resource "aws_launch_template" "app" {
     db_user     = var.db_user
     db_password = var.db_password
   }))
-
-  # Security groups at the top level (not in network_interfaces)
-  vpc_security_group_ids = [var.security_group_id]
 
   # Network settings for public IP (simplified)
   network_interfaces {

@@ -91,7 +91,7 @@ echo "Waiting for RDS to be ready..."
 sleep 60
 
 # Create database and orders table if they don't exist
-mysql -h "${db_host}" -u "${db_user}" -p"${db_password}" <<MYSQL_SCRIPT
+mysql -h "$(echo ${db_host} | cut -d: -f1)" -u "${db_user}" -p"${db_password}" <<MYSQL_SCRIPT
 CREATE DATABASE IF NOT EXISTS mydb;
 USE mydb;
 CREATE TABLE IF NOT EXISTS orders (
