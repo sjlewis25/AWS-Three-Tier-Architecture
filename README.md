@@ -53,6 +53,36 @@ This AWS Architecture is a fully modular, production-grade 3-tier infrastructure
 
 **For common issues and resolutions, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md)**
 
+##  Screenshots
+
+Infrastructure deployment proof:
+
+### Application Load Balancer
+![ALB Details](docs/screenshots/alb-details.png)
+
+### ALB Resource Map
+![ALB Resource Map](docs/screenshots/alb-resource-map.png)
+
+### Target Group Health
+![Target Health](docs/screenshots/target-group-health.png)
+
+### RDS Database
+![RDS Database](docs/screenshots/rds-database.png)
+
+### Auto Scaling Group
+![ASG](docs/screenshots/auto-scaling-group.png)
+
+### VPC Subnets
+![VPC Subnets](docs/screenshots/vpc-subnets.png)
+
+### Security Groups
+![Security Group](docs/screenshots/security-group.png)
+
+### Secrets Manager
+![Secrets Manager](docs/screenshots/secrets-manager.png)
+
+### CloudWatch Alarms
+![CloudWatch](docs/screenshots/cloudwatch-alarms.png)
 ---
 
 ## Monthly Cost Estimate (Dev Setup)
